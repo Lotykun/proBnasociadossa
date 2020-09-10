@@ -1,0 +1,87 @@
+/*
+ * Theme Name: My Timber Starter Theme
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
+*/
+.post-type-project{margin-top: 40px}
+.article-contain{display: inline-block;vertical-align: top}
+.article-gallery{width: 10%;}
+.article-gallery div div div figure:first-child{margin-top: 0}
+.article-gallery figure img{width:80px;height:80px}
+.article-main-media{/*width: 50%;background-color: #d0f2d7*/}
+.article-project-body{width: 35%;}
+.article-project-data{width: 65%;float: right;margin: -170px 0px 0px 0px;}
+.article-project-data p{margin-top: 5px;margin-bottom: 5px;text-align: right;font-size: 20px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;}
+.article-project-data h1{margin-bottom: 5px;text-align: right;font-size: 20px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;}
+.article-project-body-data{text-align: left}
+.text-project-content {font-size: 14px;font-weight: normal;line-height: 1em;word-wrap: break-word;color: #787878;font-family: calibri, Arial, Helvetica, sans-serif;text-align: justify}
+.text-project-data {font-size: 17px;font-weight: normal;line-height: 1em;word-wrap: break-word;font-family: calibri, Arial, Helvetica, sans-serif;}
+
+/*.hdr-logo {display: inline-block; margin: 0px; padding: 0px}*/
+.wrapper-div-content{width: 1150px; margin-left: auto; margin-right: auto}
+.wrapper-div-content-archive{margin-top: 90px; width: 1008px;}
+.wrapper-div-content-archive p{min-height: 55px; font-size: 17px; font-weight: bold;line-height: 1em;word-wrap: break-word;font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;text-align: left;}
+.wrapper-div-content-archive h1{min-height: 30px; font-size: 20px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(255,102,204);font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;text-align: left; width: 170px;margin-left: auto;margin-right: auto;}
+
+.wrapper-div-content-awards{width: 75%; margin-left: auto; margin-right: auto; height: 550px; overflow: hidden}
+.awards-page-wrapper{margin-top: 15px}
+.awards-page-table tr td:first-child{width: 15%}
+.awards-page-table tr td{padding-bottom: 10px; vertical-align: top; font-size: 16px; font-weight: normal; line-height: 1em; word-wrap: break-word; font-family: calibri, Arial, Helvetica, sans-serif; font-weight: normal;}
+.awards-page-h1 {float: right;margin: -100px 0px 0px 0px; font-size: 20px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;}
+.awards-page-arrows {margin-top: 5px;}
+.awards-page-arrows p{margin: 0; display: inline-block; font-size: 80px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-family: calibri, Arial, Helvetica, sans-serif;cursor:pointer;-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);transform: rotate(-90deg);}
+.awards-page-arrows p:hover{color:rgb(255,102,204);}
+
+.wrapper-div-content-contact{width: 35%; margin-left: auto; margin-right: auto; padding: 50px; background-color: rgb(199, 199, 199); margin-top: 70px}
+.wrapper-div-content-contact p{font-size: 16px;font-weight: normal;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-family: calibri, Arial, Helvetica, sans-serif;}
+.wrapper-div-content-contact a{text-decoration: none;font-size: 16px;font-weight: normal;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-family: calibri, Arial, Helvetica, sans-serif;}
+.wrapper-div-content-contact a:hover{color:rgb(255,102,204);}
+.contact-page-h1 {float: right;margin: -170px 0px 0px 0px; font-size: 20px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;}
+
+.wrapper-div-content-cv{margin-top: 15px}
+.wrapper-div-content-cv div {display: inline-block; vertical-align: top}
+.cv-page-content p {margin: 0; font-size: 17px;font-weight: normal;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-family: calibri, Arial, Helvetica, sans-serif;}
+.cv-page-content div.wp-block-spacer {height: 20px !important;}
+.wrapper-div-content-cv div.cv-page-cvdownload{width: 265px; height: auto; background-color: rgb(204,204,204);padding: 10px;margin-top: 30px}
+.wrapper-div-content-cv div.cv-page-cvdownload a {font-size: 17px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(255, 102, 204);font-family: calibri, Arial, Helvetica, sans-serif;text-decoration: none}
+.wrapper-div-content-cv div.cv-page-content{width: 45%; margin-left: 10px}
+.cv-page-h1 {float: right;margin: -115px 0px 0px 0px; font-size: 20px;font-weight: bold;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-style: normal;font-family: calibri, Arial, Helvetica, sans-serif;}
+#cv-image {width: 600px;height: auto;vertical-align: top}
+
+#nav-main {display: inline-block;vertical-align: top;margin-top: 25px;margin-left: -30px}
+#nav-main ul {list-style: none}
+#nav-main > ul {display: block !important; padding-left: 0px !important; margin: 0px}
+#nav-main > ul > li {border-left-style: none !important;}
+#nav-main ul {display: none; vertical-align: top; padding-left: 80px}
+.texto-main-menu-li {padding-left: 10px;border-left-color: rgb(107, 56, 133);border-left-width: 2px;border-left-style: solid;}
+.texto-main-menu-li a {font-size: 16px;font-weight: normal;line-height: 1em;word-wrap: break-word;color: rgb(107, 56, 133);font-family: calibri, Arial, Helvetica, sans-serif;text-decoration: none;}
+#logo-image {width: 80px;height: auto;vertical-align: top}
+
+.tease-project {display: inline-block}
+.tease-project img {width: 80px;height: 80px}
+.tease-project a {text-decoration: none}
+
+.showUP{transition:all 1s ease 0s;-moz-transition:all 1s ease 0s;-webkit-transition:all 1s ease 0s;-o-transition:all 1s ease 0s;-ms-transition:all 1s ease 0s;}
+.showUP:hover{transform:scale(1.2);-moz-transform:scale(1.2);-webkit-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
+
+.desplegable:hover{color:rgb(255,102,204);}
+.desplegable{cursor: pointer;}
+
+.article-project-body-content{margin-left: 4px}
+
+.lang-switcher{display: inline;margin-left: 5px}
+.lang-item {display: inline;list-style: none;}
+
+.home-main-container {margin-left: auto;margin-right: auto;width:805px;margin-top: 100px}
+.home-main-img-container{}
+.home-main-languaje-container{display: inline-block;padding-bottom: 65px;vertical-align: bottom}
+
+.home-main-languaje-container a {font-size: 11px; color: #FF66FF; text-decoration: none;font-family: Arial, Helvetica, sans-serif;padding-left: 20px}
+.home-main-languaje-container a:link {color: #FF66FF;text-decoration: none;}
+.home-main-languaje-container a:visited {text-decoration: none;color: #FF66FF;}
+.home-main-languaje-container a:hover {text-decoration: none;color: #CCCCCC;}
+.home-main-languaje-container a:active {text-decoration: none;color: #FFFFFF;}
+
+
+#swiffycontainer {width: 300px; height: 335px; display: inline-block}
+#footer {position: absolute;right: 0;bottom: 0;left: 0;}

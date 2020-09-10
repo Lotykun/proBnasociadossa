@@ -1,0 +1,28 @@
+{
+  "name": "src",
+  "homepage": "https://bnasociadossa.es",
+  "authors": [
+    "Juan Lotito"
+  ],
+  "description": "\"Dependencies of the project BN ASOCIADOS\"",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "lightgallery": "^1.3.9",
+    "lg-thumbnail": "^1.0.3",
+    "datepicker": "fengyuanchen/datepicker#^0.5.4",
+    "bootstrap": "4.1.3"
+  },
+  "resolutions": {
+    "jquery": "~3.3.1"
+  }
+}

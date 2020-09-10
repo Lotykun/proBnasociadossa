@@ -1,0 +1,9 @@
+{% if data %}
+    {{render_twig_field("featuredgallery",data)}}
+    <a href="#" id="remove-post-featuredgallery">{{_e('Remove Featured Gallery','ueforma-contenttype-gallery')}}</a>
+{% else %}
+    <p class="hide-if-no-js">
+        <a href="#" id="set-post-featuredgallery">{{_e('Set Featured Gallery', 'ueforma-contenttype-gallery')}}</a>
+    </p>
+{% endif %}
+<input type="hidden" name="featuredgallery" id="featuredgallery" value="{{data}}"/>

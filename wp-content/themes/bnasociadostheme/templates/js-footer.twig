@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function(){ 
+            $("a.desplegable").hover(
+                function() {
+                    var currentA = $(this);
+                    var currentLi = $(this).parent();
+                    var currentUl = $(this).parent().children("ul");
+                    
+                    currentLi.siblings().find("ul").hide("slow");
+                    var ulMarginBottom = currentUl.height() - (currentLi.prevAll().length + 1) * currentA.height();
+                    var ulMarginTop = (currentLi.prevAll().length + 1) * currentA.height();
+                    currentUl.css("margin-top","-" + ulMarginTop + "px");
+                    currentUl.css("margin-bottom","-" + ulMarginBottom + "px");
+                    currentUl.show("slow");
+                }
+            );
+        });
+    })(jQuery);
+</script>

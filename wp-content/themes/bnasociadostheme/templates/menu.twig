@@ -1,0 +1,16 @@
+{% if menu %}
+	<ul class="level-{{level}}">
+	{% for item in menu %}
+                {% set levelPro = level + 1 %}
+                {% set menuItemLink = (item.link != '#' and item.link != '' and item.link != ' ') ? true : false %}
+                {% set menuItemTerm = (item.object == 'category' or item.object == 'project_status' or item.object == 'year') ? true : false %}
+                {% set isArchive = ('archive' in body_class) ? true : false %}
+                {% set clickableClass = (menuItemLink and menuItemTerm and isArchive) ? ' clickable' : '' %}
+                {% set hrefAttr = (menuItemLink) ? ' href="' ~ item.link ~ '"' : '' %}
+                <li class="{{ item.classes | join(' ') }} texto-main-menu-li">
+                        <a target="{{ item.target }}" class="desplegable{{clickableClass}}"{{hrefAttr}}>{{ item.title }}</a>
+			{% include "menu.twig" with {'menu': item.children, 'level': levelPro} %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

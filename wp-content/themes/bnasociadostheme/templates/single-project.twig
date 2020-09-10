@@ -1,0 +1,72 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="content-wrapper wrapper-div-content">
+        <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+            <section class="article-content">
+                <!--<h1 class="article-h1 single-page-h1">{{ post.title }}</h1>-->
+                <!--<a href="{{ post.link }}">{{ _e('edit') }}</a>-->
+                <!--<p class="blog-author">
+                    <span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+                </p>-->
+                <div class="article-project-data">
+                    <h1 class="article-h1">{{ post.title }}</h1>
+                    <p>{{ post.terms('category') | join(' ') }}</p>
+                    <p>{{ post.terms('year') | join(' ') }}</p>
+                </div>
+                <div class="article-contain article-gallery">
+                    <div class="single-post-media-wrap-gallery">
+                        <div class="single-post-media-gallery">
+                            {{renderFeaturedGallery(post)}}
+                        </div>
+                    </div>
+                </div>
+                <div class="article-contain article-main-media">
+                    <img src="{{ post.thumbnail.src|resize(600,500) }}" width="600px" height="500px">
+                </div>
+                <div class="article-body article-contain article-project-body">
+                    <div class="article-project-body-data text-project-data">
+                        <table>
+                            <tr>
+                              <th>Promotor:</th>
+                              <td>{{post.promotor}}</td>
+                            </tr>
+                            <tr>
+                              <th>{{ __('Superficie') }}:</th>
+                              <td>{{post.surface|number_format(2, ',', '.') ~ 'm2'}}</td>
+                            </tr>
+                            <tr>
+                              <th>{{ __('Presupuesto') }}:</th>
+                              <td>{{post.budget|number_format(2, ',', '.') ~ '€'}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="article-project-body-content text-project-content">
+                        {{post.content}}
+                    </div>
+                </div>
+            </section>
+
+            {#<!-- comment box -->
+            <section class="comment-box">
+                <!-- comments -->
+                <div class="comments">
+                    {% if post.comments %}
+                        <h3> comments </h3>
+                        {% for cmt in post.comments %}
+                            {% include "comment.twig" with {comment:cmt} %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                {% if post.comment_status == "closed" %}
+                    <p> comments for this post are closed </p>
+                {% else %}
+                    <!-- comment form -->
+                    {% include "comment-form.twig" %}
+                {% endif %}
+            </section>
+            #}
+        </article>
+    </div><!-- /content-wrapper -->
+{% endblock %}

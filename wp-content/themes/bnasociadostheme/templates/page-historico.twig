@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper wrapper-div-content awards-page-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+                            <h1 class="article-h1 awards-page-h1">{{post.title|upper}}</h1>
+                            <div class="article-body wrapper-div-content-awards">
+                                    {{post.content}}
+                            </div>
+                            <div class="awards-page-arrows">
+                                <p id="awards-page-arrow-down">&lt;</p>
+                                <p id="awards-page-arrow-up">&gt;</p>
+                            </div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function(){
+                var dataHeight = $( ".awards-page-table" ).height();
+                $( "#awards-page-arrow-down" ).click(function() {
+                    var valor = Math.abs(parseInt($( ".awards-page-table" ).css("margin-top"))) + 200;
+                    if (valor < dataHeight) {
+                        $(".awards-page-table").animate({marginTop: "-=225px"}, 1000);
+                    }
+                });
+                $( "#awards-page-arrow-up" ).click(function() {
+                    var valor = Math.abs(parseInt($( ".awards-page-table" ).css("margin-top")));
+                    if (valor > 0) {
+                        $( ".awards-page-table" ).animate({marginTop: "+=225px"}, 1000 );
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+{% endblock %}

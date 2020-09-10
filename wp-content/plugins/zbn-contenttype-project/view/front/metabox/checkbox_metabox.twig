@@ -1,0 +1,7 @@
+{% if data == "TRUE" %}
+    {% set checked = " checked" %}
+{% else %}
+    {% set checked = "" %}
+{% endif %}
+<input type="checkbox" name="{{field_id}}" value="{{data}}"{{checked}}/>
+<label for="{{field_id}}">{{field_label}}</label>

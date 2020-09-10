@@ -1,0 +1,49 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "index.twig" %}
+
+{% block content %}
+    <div class="wrapper-div-content wrapper-div-content-archive">
+        <h1></h1>
+        {{ parent() }}
+        <p></p>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function(){ 
+                $( "article a" ).hover(
+                        function() {
+                            if ($(this).parent().css('opacity') === "1") {
+                                var title = $(this).data("post");
+                                $(".wrapper-div-content-archive p").text(title);
+                            }
+                        }, function() {
+                            $(".wrapper-div-content-archive p").text("");
+                        }
+                );
+                $( "a.clickable" ).click(
+                    function() {
+                        if (!$(this).hasClass('disabled')) {
+                            var term = $(this).text().replace(" ","-");
+                            show_thumbnails_by_term(term);
+                        }
+                        return false;
+                    }
+                );
+                {% if defaultTerm %}
+                    show_thumbnails_by_term("{{defaultTerm}}");
+                {% endif %}
+            });
+            function show_thumbnails_by_term(term) {
+                $('.wrapper-div-content-archive h1').text(term.replace("-"," "));
+                $("article").fadeTo('fast', 0);
+                $("article." + term ).fadeTo('fast', 1);
+            }
+        })(jQuery);
+    </script>
+{% endblock %}

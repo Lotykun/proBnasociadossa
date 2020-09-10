@@ -1,0 +1,51 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+    </head>
+{% endblock %}
+
+    <body class="{{body_class}}" data-template="base.twig">
+        <!--<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>-->
+        <header class="header" >
+            {% block header %}
+                <div class="wrapper wrapper-div-content">
+                    <!--<h1 class="hdr-logo" role="banner">
+                        <a class="hdr-logo-link" href="{#{{site.url}}#}" rel="home">{#{{site.name}}#}</a>
+                        <img id="logo-image" src="{#{{getPathCode()}}#}/img/LOGO.jpg" alt="Forma">
+                    </h1>-->
+                    <img id="logo-image" src="{{getPathCode()}}/img/LOGO.jpg" alt="Forma">
+                    <div class="lang-switcher">{% do fn('pll_the_languages', {'show_flags': 1,'show_names': 0, 'hide_current': 1}) %}</div>
+                    <nav id="nav-main" class="nav-main" role="navigation">
+                        {% include "menu.twig" with {'menu': menu.get_items, 'level': 1} %}
+                    </nav><!-- #nav -->
+                </div>
+            {% endblock %}
+        </header>
+
+        <section id="content" role="main" class="content-wrapper">
+            {% if title %}<h1>{{title}}</h1>{% endif %}
+            <div class="wrapper {{sidebar_class}}">
+                {% block content %}
+                    Sorry, no content
+                {% endblock %}
+            </div>
+            {% if sidebar %}
+                <aside class="layout-sidebar">
+                    {{sidebar}}
+                </aside>
+            {% endif %}
+        </section>
+
+        {% block footer %}
+            <footer id="footer">
+                <div class="wrapper-div-content">
+            {#{% include 'footer.twig' %}#}
+                </div>
+            </footer>
+            {{ function('wp_footer') }}
+            {% include('js-footer.twig') %}
+        {% endblock %}
+    </body>
+</html>

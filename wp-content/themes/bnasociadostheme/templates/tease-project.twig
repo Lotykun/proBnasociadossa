@@ -1,0 +1,7 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+        <a href="{{post.link}}" data-post='{{post.post_title}}'>
+            <img src="{{post.thumbnail.src|resize(80,80)}}" class="showUP"/>
+        </a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "name": "bn/core",
+    "licence": "proprietary",
+    "type": "project",
+    "require": {
+        "symfony/symfony": "^3.4",
+        "composer/composer": "1.6.4"
+    }
+}

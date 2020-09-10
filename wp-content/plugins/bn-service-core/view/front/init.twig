@@ -1,0 +1,17 @@
+<div class="wrap">
+    {% if notice %}
+        <div class="notice {{notice.type}} is-dismissible">
+            <p>{{notice.message}}</p>
+        </div>
+    {% endif %}
+    <h2>{{_e("CORE PLUGIN",locale)}}</h2>
+    <p>{{_e("In this section you can change the default settigns of the plugin",locale)}}</p>
+    
+    <form method="post" action="{{formUrl}}" class="validate">
+        {{wp_nonce_field('init', '_corenonce')}}
+        <p class="submit">
+            <input name="submit" id="init" class="button button-primary" value="{{_e("Update",locale)}}" type="submit"/>
+        </p>
+        {{render_wp_table("Libraries_Configure_Table")}}
+    </form>
+</div>
